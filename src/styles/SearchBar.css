@@ -1,0 +1,33 @@
+#search-bar{
+    height: 48px;
+    width: 465px;
+    border: 0.5px solid #E6E8EC;
+    border-radius: 10px;
+    margin-bottom: 52px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+#search-bar-icon{
+    height: 20px;
+    width: auto;
+    margin: 0 16px;
+}
+#search-bar-input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: 0;
+    outline-offset: 0;
+    font-size: 14px;
+    color: #182135;
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+}
+
+#search-bar-input::placeholder{
+    font-size: 14px;
+    color: #626264;
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+}
