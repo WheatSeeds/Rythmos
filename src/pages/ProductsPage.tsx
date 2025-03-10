@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import {fetchProducts} from "../API/api.ts";
 import ProductList from "../components/ProductList.tsx";
+import Header from "../components/Header.tsx";
 
 const ProductsPage = () => {
     const [products, setProducts] = useState([])
@@ -16,9 +17,12 @@ const ProductsPage = () => {
     }, []);
 
     return (
-        <main>
-            <ProductList products={products}/>
-        </main>
+        <>
+            <Header/>
+            <main>
+                <ProductList products={products}/>
+            </main>
+        </>
     );
 };
 

@@ -1,0 +1,51 @@
+header{
+    height: 92px;
+    width: 100%;
+    border-bottom: 1px solid #E6E8EC;
+    margin-bottom: 52px;
+}
+.header-logo{
+    height: 52px;
+    width: 138px;
+    background-color: #E6E8EC;
+    color: #23262F;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    border-radius: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divider{
+    height: 40px;
+    width: 2px;
+    background-color: #E6E8EC;
+}
+.header-content{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 160px;
+}
+.header-content-left{
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.header-menu{
+    display: flex;
+    gap: 32px;
+    font-weight: bold;
+    color: #777E90;
+    font-size: 16px;
+    font-family: "DM sans", sans-serif;
+}
+
+.header-shopping-cart-icon{
+    height: 30px;
+    width: auto;
+}
