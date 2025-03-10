@@ -1,0 +1,12 @@
+.ProductList{
+    display: grid;
+    grid-template-columns: repeat(4, 256px);
+    column-gap: 32px;
+    row-gap: 52px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
