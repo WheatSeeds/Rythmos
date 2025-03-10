@@ -1,12 +1,11 @@
 import {IProduct} from "../types/types.tsx";
-import {FC} from "react";
 import Product from "./Product.tsx";
 
-interface ProductListProps {
+type ProductListProps = {
     products: IProduct[];
 }
 
-const ProductList: FC<ProductListProps> = ({products}) => {
+const ProductList = ({products} : ProductListProps) => {
     return (
         <>
             <section className="ProductList">

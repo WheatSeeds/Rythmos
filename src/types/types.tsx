@@ -1,16 +1,16 @@
-export interface IPrice{
+export type IPrice = {
     display: string;
 }
 
-export interface IPhoto{
+export type IPhoto ={
     href: string;
 }
 
-export interface ILinks{
+export type ILinks = {
     photo: IPhoto
 }
 
-export interface IProduct {
+export type IProduct = {
     id: number;
     price: IPrice;
     _links: ILinks;

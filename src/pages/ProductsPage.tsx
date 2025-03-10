@@ -8,6 +8,7 @@ const ProductsPage = () => {
     async function loadProducts() {
         const data = await fetchProducts();
         setProducts(data);
+        console.log(data)
     }
 
     useEffect(() => {

@@ -1,11 +1,10 @@
-import {FC} from "react";
 import {IProduct} from "../types/types.tsx";
 
-interface ProductProps {
+type ProductProps = {
     product: IProduct;
 }
 
-const Product: FC<ProductProps> = ({product}) => {
+const Product = ({product} : ProductProps) => {
     return (
         <div className="product-item">
             <img className="product-item-image" src={product._links.photo.href} alt=""/>
