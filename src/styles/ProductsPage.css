@@ -1,0 +1,7 @@
+#products-page-menu{
+    display: flex;
+    width: 1120px;
+    margin-bottom: 52px;
+    gap: 32px;
+    justify-content: end;
+}

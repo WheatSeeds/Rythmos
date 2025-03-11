@@ -3,6 +3,7 @@ import {fetchProducts} from "../API/api.ts";
 import ProductList from "../components/ProductList.tsx";
 import Header from "../components/Header.tsx";
 import SearchBar from "../components/SearchBar.tsx";
+import FilterButton from "../components/FilterButton.tsx";
 
 const ProductsPage = () => {
     const [products, setProducts] = useState([])
@@ -29,10 +30,13 @@ const ProductsPage = () => {
         <>
             <Header/>
             <main>
-                <SearchBar
-                    value={searchQuery}
-                    changeHandler={changeHandler}
-                />
+                <div id="products-page-menu">
+                    <SearchBar
+                        value={searchQuery}
+                        changeHandler={changeHandler}
+                    />
+                    <FilterButton />
+                </div>
                 <ProductList products={products}/>
             </main>
         </>

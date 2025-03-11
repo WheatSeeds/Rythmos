@@ -3,6 +3,9 @@ header{
     width: 100%;
     border-bottom: 1px solid #E6E8EC;
     margin-bottom: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .header-logo{
     height: 52px;
@@ -28,7 +31,7 @@ header{
     height: 100%;
     align-items: center;
     justify-content: space-between;
-    margin: 0 160px;
+    width: 1120px;
 }
 .header-content-left{
     display: flex;

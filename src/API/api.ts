@@ -15,10 +15,16 @@ export async function fetchProducts({query} : fetchProductsProps) {
         },
         params: {
             query: query,
+            sort: "price|desc",
+            condition: 'new',
+            price_min: 0.1,
+            per_page: 8,
+            state: 'for_sale',
         }
     });
 
     return response.data.listings;
 }
+
 
 

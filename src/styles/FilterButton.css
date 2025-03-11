@@ -1,0 +1,14 @@
+#filter-button{
+    background-color: #000000;
+    height: 52px;
+    width: 52px;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#filter-button-icon{
+    height: 20px;
+    width: auto;
+}
