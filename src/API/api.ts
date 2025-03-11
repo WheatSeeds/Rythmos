@@ -8,7 +8,7 @@ type fetchProductsProps = {
 export async function fetchProducts({query} : fetchProductsProps) {
     const response = await axios.get("https://api.reverb.com/api/listings", {
         headers: {
-            "Authorization": `Bearer b737f9905dd0cc4a8f62db4776df11fdb9e40d65722b875fe7cce2f4d35daefd`,
+            "Authorization": `Bearer 69e7e4de902b2a4ebc9998f26346800855f1c657ae04c0d3eda7909b18081a18`,
             "Accept": "application/hal+json",
             "Content-Type": `application/hal+json`,
             "Accept-Version": "3.0"
@@ -25,6 +25,5 @@ export async function fetchProducts({query} : fetchProductsProps) {
 
     return response.data.listings;
 }
-
 
 

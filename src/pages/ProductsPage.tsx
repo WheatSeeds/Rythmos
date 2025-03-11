@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from "react";
 import {fetchProducts} from "../API/api.ts";
-import ProductList from "../components/ProductList.tsx";
+import List from "../components/List.tsx";
 import Header from "../components/Header.tsx";
 import SearchBar from "../components/SearchBar.tsx";
-import FilterButton from "../components/FilterButton.tsx";
+import Product from "../components/Product.tsx";
+import {IProduct} from "../types/types.tsx";
 
 const ProductsPage = () => {
     const [products, setProducts] = useState([])
@@ -35,9 +36,15 @@ const ProductsPage = () => {
                         value={searchQuery}
                         changeHandler={changeHandler}
                     />
-                    <FilterButton />
                 </div>
-                <ProductList products={products}/>
+                <List
+                    className={"product-list"}
+                    items={products}
+                    renderItem={
+                        (product: IProduct) => <Product product={product} key={product.id} />
+                    }
+                />
+
             </main>
         </>
     );

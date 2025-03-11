@@ -17,3 +17,9 @@ export type IProduct = {
     make: string;
     model: string;
 }
+
+export type ICategory = {
+    uuid: string;
+    name: string;
+    _links: ILinks;
+}
