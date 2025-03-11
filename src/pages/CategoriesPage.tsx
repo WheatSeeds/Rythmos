@@ -6,7 +6,6 @@ import Header from "../components/Header.tsx";
 import {categories} from "../data/categories.ts";
 
 const CategoriesPage = () => {
-
     return (
         <>
             <Header/>

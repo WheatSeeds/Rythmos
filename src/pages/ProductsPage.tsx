@@ -5,13 +5,18 @@ import Header from "../components/Header.tsx";
 import SearchBar from "../components/SearchBar.tsx";
 import Product from "../components/Product.tsx";
 import {IProduct} from "../types/types.tsx";
+import {useParams} from "react-router";
 
 const ProductsPage = () => {
     const [products, setProducts] = useState([])
     const [searchQuery, setSearchQuery] = useState("");
 
-    async function loadProducts(query = "") {
-        const data = await fetchProducts({query});
+    const { uuid } = useParams<string>();
+
+    console.log(uuid);
+
+    async function loadProducts(query = "", uuid = "") {
+        const data = await fetchProducts({query, uuid});
         setProducts(data);
     }
 
@@ -20,12 +25,12 @@ const ProductsPage = () => {
     }
 
     useEffect(() => {
-        loadProducts(searchQuery);
-    }, [searchQuery]);
+        loadProducts(searchQuery, uuid);
+    }, [searchQuery, uuid]);
 
     useEffect(() => {
-        loadProducts();
-    }, []);
+        loadProducts("", uuid);
+    }, [uuid]);
 
     return (
         <>

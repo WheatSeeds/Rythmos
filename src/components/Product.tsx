@@ -13,7 +13,7 @@ const Product = ({product} : ProductProps) => {
                 <span className="product-item-price">{product.price.display}</span>
             </div>
             <div className="product-item-btn">
-                <img className="product-item-btn-img" src="./icons/shopping-cart.svg" alt=""/>
+                <img className="product-item-btn-img" src="../icons/shopping-cart.svg" alt=""/>
             </div>
         </div>
     );

@@ -8,7 +8,7 @@ type CategoryProps = {
 const Category = ({category} : CategoryProps) => {
     return (
         <>
-            <Link to="/products">
+            <Link to={`/products/${category.uuid}`}>
                 <div className="category-item">
                     <img className="category-item-image" src={category._links.photo.href} alt=""/>
                     <span className="category-item-title">{category.name}</span>
