@@ -6,14 +6,14 @@ import SearchBar from "../components/SearchBar.tsx";
 import Product from "../components/Product.tsx";
 import {IProduct} from "../types/types.tsx";
 import {useParams} from "react-router";
+import FilterDropdown from "../components/FilterDropdown.tsx";
 
 const ProductsPage = () => {
     const [products, setProducts] = useState([])
     const [searchQuery, setSearchQuery] = useState("");
+    const [dropdownVisible, setDropdownVisible] = useState(false);
 
     const { uuid } = useParams<string>();
-
-    console.log(uuid);
 
     async function loadProducts(query = "", uuid = "") {
         const data = await fetchProducts({query, uuid});
@@ -41,6 +41,7 @@ const ProductsPage = () => {
                         value={searchQuery}
                         changeHandler={changeHandler}
                     />
+                    <FilterDropdown visible={dropdownVisible} setDropdownVisible={setDropdownVisible}/>
                 </div>
                 <List
                     className={"product-list"}
@@ -49,7 +50,6 @@ const ProductsPage = () => {
                         (product: IProduct) => <Product product={product} key={product.id} />
                     }
                 />
-
             </main>
         </>
     );

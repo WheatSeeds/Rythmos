@@ -15,7 +15,7 @@ export async function fetchProducts({query, uuid} : fetchProductsProps) {
         },
         params: {
             query: query,
-            sort: "price|desc",
+            sort: "price",
             condition: 'new',
             price_min: 0.1,
             per_page: 8,

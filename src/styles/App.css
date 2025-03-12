@@ -3,3 +3,17 @@
     margin: 0;
     padding: 0;
 }
+
+#root{
+    position: relative;
+}
+
+input{
+    outline: 0;
+    outline-offset: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
