@@ -17,7 +17,7 @@ const App = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<CategoriesPage/>} />
+                <Route path="/products" element={<CategoriesPage/>} />
                 <Route path="/products/:uuid" element={<ProductsPage/>} />
             </Routes>
         </BrowserRouter>

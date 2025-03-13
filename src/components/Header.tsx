@@ -1,7 +1,29 @@
+import {Link} from "react-router";
+
 const Header = () => {
 
-    const headerMenu = ["Home", "Store", "About Us", "Contact", "FAQ"]
-
+    const headerMenu = [
+        {
+            name: "Home",
+            routeLink: "/home",
+        },
+        {
+            name: "Store",
+            routeLink: "/products",
+        },
+        {
+            name: "About Us",
+            routeLink: "/home",
+        },
+        {
+            name: "Contact",
+            routeLink: "/home",
+        },
+        {
+            name: "FAQ",
+            routeLink: "/home",
+        }
+    ]
 
     return (
         <header>
@@ -11,7 +33,7 @@ const Header = () => {
                     <div className="divider"></div>
                     <div className="header-menu">
                         {headerMenu.map(item => (
-                            <span key={item}>{item}</span>
+                            <Link to={item.routeLink} className="header-menu-link" key={item.name}>{item.name}</Link>
                         ))}
                     </div>
                 </div>
