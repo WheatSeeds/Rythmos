@@ -3,11 +3,11 @@ import {useEffect, useState} from "react";
 import FilterCheckbox from "./FilterCheckbox.tsx";
 import FilterRadio from "./FilterRadio.tsx";
 import FilterMinMaxPrice from "./FilterMinMaxPrice.tsx";
+import {categories} from "../../data/categories.ts";
 
 type FilterDropdownProps = {
     visible: boolean;
     setDropdownVisible: (visible: boolean) => void;
-    brands: string[];
     loadProducts: (query: string,
                    uuid: string,
                    brandsFilter: string[],
@@ -18,8 +18,8 @@ type FilterDropdownProps = {
     query: string;
 }
 
-const FilterDropdown = ({query, uuid, visible, setDropdownVisible, brands, loadProducts} : FilterDropdownProps) => {
-
+const FilterDropdown = ({query, uuid, visible, setDropdownVisible, loadProducts} : FilterDropdownProps) => {
+    const brands = categories.find(category => category.uuid == uuid)!.brands;
     const [minPriceValue, setMinPriceValue] = useState<number>(1);
     const [maxPriceValue, setMaxPriceValue] = useState<number>(500000);
     const [rangeValue, setRangeValue] = useState<number[]>([minPriceValue, maxPriceValue]);

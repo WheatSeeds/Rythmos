@@ -4,6 +4,7 @@ import List from "../components/List.tsx";
 import Header from "../components/Header.tsx";
 
 import {categories} from "../data/categories.ts";
+import Footer from "../components/Footer.tsx";
 
 const CategoriesPage = () => {
     return (
@@ -18,6 +19,7 @@ const CategoriesPage = () => {
                     }
                 />
             </main>
+            <Footer/>
         </>
     );
 };

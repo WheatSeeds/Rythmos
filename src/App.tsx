@@ -6,6 +6,7 @@ import "./styles/Filter.css"
 import "./styles/ProductsPage.css"
 import "./styles/Category.css"
 import "./styles/CategoryList.css"
+import "./styles/Footer.css"
 import "./styles/App.css"
 
 import ProductsPage from "./pages/ProductsPage.tsx";

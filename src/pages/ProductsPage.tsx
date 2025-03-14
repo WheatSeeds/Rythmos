@@ -7,7 +7,7 @@ import Product from "../components/Product.tsx";
 import {IProduct} from "../types/types.tsx";
 import {useParams} from "react-router";
 import FilterDropdown from "../components/Filter/FilterDropdown.tsx";
-import {categories} from "../data/categories.ts";
+import Footer from "../components/Footer.tsx";
 
 const ProductsPage = () => {
     const [products, setProducts] = useState([])
@@ -15,9 +15,8 @@ const ProductsPage = () => {
     const [dropdownVisible, setDropdownVisible] = useState(false);
 
     const { uuid } = useParams<string>();
-    const brands = categories.find(category => category.uuid == uuid)!.brands;
 
-    async function loadProducts(query = "", uuid = "",brandsFilter = [], minPrice = 1, maxPrice = 500000, priceFilter = "") {
+    async function loadProducts(query = "", uuid = "",brandsFilter = [''], minPrice = 1, maxPrice = 500000, priceFilter = "") {
         const data = await fetchProducts({query, uuid, brandsFilter, minPrice, maxPrice, priceFilter});
         setProducts(data);
     }
@@ -36,7 +35,6 @@ const ProductsPage = () => {
                         changeHandler={changeHandler}
                     />
                     <FilterDropdown
-                        brands={brands}
                         visible={dropdownVisible}
                         setDropdownVisible={setDropdownVisible}
                         loadProducts={loadProducts}
@@ -52,6 +50,7 @@ const ProductsPage = () => {
                     }
                 />
             </main>
+            <Footer/>
         </>
     );
 };

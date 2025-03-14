@@ -1,5 +1,6 @@
 .category-item{
     width: 100%;
+    max-width: 720px;
     height: 225px;
     background-color: #000000;
     overflow: hidden;
