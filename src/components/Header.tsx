@@ -21,7 +21,7 @@ const Header = () => {
         },
         {
             name: "FAQ",
-            routeLink: "/home",
+            routeLink: "/faq",
         }
     ]
 

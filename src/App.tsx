@@ -8,11 +8,14 @@ import "./styles/Category.css"
 import "./styles/CategoryList.css"
 import "./styles/Footer.css"
 import "./styles/App.css"
+import "./styles/FAQPage.css"
 
 import ProductsPage from "./pages/ProductsPage.tsx";
 import CategoriesPage from "./pages/CategoriesPage.tsx";
+import FAQPage from "./pages/FAQPage.tsx";
 
 import {BrowserRouter, Route, Routes} from "react-router";
+
 
 const App = () => {
     return (
@@ -20,6 +23,7 @@ const App = () => {
             <Routes>
                 <Route path="/products" element={<CategoriesPage/>} />
                 <Route path="/products/:uuid" element={<ProductsPage/>} />
+                <Route path="/faq" element={<FAQPage/>} />
             </Routes>
         </BrowserRouter>
     );
