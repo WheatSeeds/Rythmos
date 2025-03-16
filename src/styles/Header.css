@@ -52,3 +52,25 @@ header{
     height: 30px;
     width: auto;
 }
+
+.header-shopping-cart-count{
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    border: 1px solid #777E90;
+    background-color: #FCFCFD;
+    color: #18191D;
+    font-size: 12px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 65%;
+    bottom: 110%;
+}
+
+.header-shopping-cart{
+    position: relative;
+}

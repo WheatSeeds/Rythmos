@@ -1,5 +1,7 @@
 export type IPrice = {
     display: string;
+    amount: string;
+    symbol: string;
 }
 
 export type IPhoto ={
@@ -21,6 +23,7 @@ export type IProduct = {
 export type IProductInfo = IProduct & {
     description: HTMLElement;
     year: string;
+    quantity: number;
 }
 
 export type ICategory = {

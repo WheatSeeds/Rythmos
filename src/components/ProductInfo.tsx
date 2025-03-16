@@ -1,5 +1,8 @@
 import {IProductInfo} from "../types/types.tsx";
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {addToCart} from "../store/cartSlice.ts";
+import {RootState} from "../store/store.ts";
 
 type ProductInfoProps = {
     product?: IProductInfo;
@@ -7,6 +10,12 @@ type ProductInfoProps = {
 
 const ProductInfo = ({product} : ProductInfoProps) => {
     const [productCounter, setProductCounter] = useState(1);
+    const cart = useSelector((state: RootState) => state.cart)
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        console.log(cart)
+    }, [cart])
 
     return (
         <div id="product">
@@ -15,7 +24,10 @@ const ProductInfo = ({product} : ProductInfoProps) => {
                 <span id="product-content-title">{product?.model}</span>
                 <span id="product-content-price">{product?.price.display}</span>
                 <div id="product-content-buttons">
-                    <button id="add-to-cart-button">
+                    <button id="add-to-cart-button"
+                            onClick={() => dispatch(addToCart({...product!, quantity: productCounter}))}
+
+                    >
                         <img id="add-to-cart-button-image" src="../../icons/cart-button.svg" alt=""/>
                         <span id="add-to-cart-button-text">Add to Cart</span>
                     </button>

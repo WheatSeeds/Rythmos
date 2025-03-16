@@ -1,4 +1,6 @@
 import {Link} from "react-router";
+import {useSelector} from "react-redux";
+import {RootState} from "../store/store.ts";
 
 const Header = () => {
 
@@ -25,6 +27,8 @@ const Header = () => {
         }
     ]
 
+    const cart = useSelector((state: RootState) => state.cart)
+
     return (
         <header>
             <div className="header-content">
@@ -40,6 +44,10 @@ const Header = () => {
                 <div className="header-content-right">
                     <Link to="/cart" className="header-shopping-cart">
                         <img className="header-shopping-cart-icon" src="../../icons/shopping-cart-dark.svg" alt=""/>
+                        {(cart.length > 0)
+                            ?<div className="header-shopping-cart-count">{cart.length}</div>
+                            :''
+                        }
                     </Link>
                 </div>
             </div>
