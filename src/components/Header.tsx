@@ -39,7 +39,7 @@ const Header = () => {
                 </div>
                 <div className="header-content-right">
                     <div className="header-shopping-cart">
-                        <img className="header-shopping-cart-icon" src="../icons/shopping-cart-dark.svg" alt=""/>
+                        <img className="header-shopping-cart-icon" src="../../icons/shopping-cart-dark.svg" alt=""/>
                     </div>
                 </div>
             </div>

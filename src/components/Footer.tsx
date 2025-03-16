@@ -23,23 +23,23 @@ const Footer = () => {
             name: 'Products',
             links: [
                 {
-                    name: 'Lorem ipsum dolor sit amet',
+                    name: 'Lorem ipsum dolor sit ame',
                     routeLink: ''
                 },
                 {
-                    name: 'Lorem ipsum dolor sit amet',
+                    name: 'Lorem ipsum dolor sit am',
                     routeLink: ''
                 },
                 {
-                    name: 'Lorem ipsum dolor sit amet',
+                    name: 'Lorem ipsum dolor sit ',
                     routeLink: ''
                 },
                 {
-                    name: 'Lorem ipsum dolor sit amet',
+                    name: 'Lorem ipsum dolor si',
                     routeLink: ''
                 },
                 {
-                    name: 'Lorem ipsum dolor sit amet',
+                    name: 'Lorem ipsum dolor s',
                     routeLink: ''
                 },
             ],
@@ -82,7 +82,7 @@ const Footer = () => {
                             <span className="footer-content-block-title">{item.name}</span>
                             <div className="footer-content-block-links">
                                 {item.links.map((link) => (
-                                    <Link to={link.routeLink}>{link.name}</Link>
+                                    <Link to={link.routeLink}  >{link.name}</Link>
                                 ))}
                             </div>
                         </div>

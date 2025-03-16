@@ -12,6 +12,10 @@ type fetchProductsProps = {
     priceFilter: string;
 }
 
+type fetchProductProps = {
+    productId?: string;
+}
+
 export async function fetchProducts({query, uuid, brandsFilter, minPrice, maxPrice, priceFilter} : fetchProductsProps) {
     console.log(brandsFilter, minPrice, maxPrice, priceFilter);
     const response = await axios.get("https://api.reverb.com/api/listings", {
@@ -33,7 +37,20 @@ export async function fetchProducts({query, uuid, brandsFilter, minPrice, maxPri
             make: brandsFilter,
         }
     });
+    console.log(response.data.listings);
     return response.data.listings;
+}
+
+export async function fetchProduct({productId} : fetchProductProps) {
+    const response = await axios.get(`https://api.reverb.com/api/listings/${productId}`, {
+        headers: {
+            "Authorization": `Bearer ${API_KEY}`,
+            "Accept": "application/hal+json",
+            "Content-Type": `application/hal+json`,
+            "Accept-Version": "3.0"
+        },
+    });
+    return response.data;
 }
 
 

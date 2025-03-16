@@ -18,6 +18,11 @@ export type IProduct = {
     model: string;
 }
 
+export type IProductInfo = IProduct & {
+    description: HTMLElement;
+    year: string;
+}
+
 export type ICategory = {
     uuid: string;
     name: string;
