@@ -38,9 +38,9 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="header-content-right">
-                    <div className="header-shopping-cart">
+                    <Link to="/cart" className="header-shopping-cart">
                         <img className="header-shopping-cart-icon" src="../../icons/shopping-cart-dark.svg" alt=""/>
-                    </div>
+                    </Link>
                 </div>
             </div>
         </header>

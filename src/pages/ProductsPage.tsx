@@ -29,26 +29,28 @@ const ProductsPage = () => {
         <>
             <Header/>
             <main>
-                <div id="products-page-menu">
-                    <SearchBar
-                        value={searchQuery}
-                        changeHandler={changeHandler}
-                    />
-                    <FilterDropdown
-                        visible={dropdownVisible}
-                        setDropdownVisible={setDropdownVisible}
-                        loadProducts={loadProducts}
-                        query={searchQuery}
-                        uuid={uuid!}
+                <div id="products-page-content">
+                    <div id="products-page-menu">
+                        <SearchBar
+                            value={searchQuery}
+                            changeHandler={changeHandler}
+                        />
+                        <FilterDropdown
+                            visible={dropdownVisible}
+                            setDropdownVisible={setDropdownVisible}
+                            loadProducts={loadProducts}
+                            query={searchQuery}
+                            uuid={uuid!}
+                        />
+                    </div>
+                    <List
+                        className={"product-list"}
+                        items={products}
+                        renderItem={
+                            (product: IProduct) => <Product product={product} key={product.id} />
+                        }
                     />
                 </div>
-                <List
-                    className={"product-list"}
-                    items={products}
-                    renderItem={
-                        (product: IProduct) => <Product product={product} key={product.id} />
-                    }
-                />
             </main>
             <Footer/>
         </>
