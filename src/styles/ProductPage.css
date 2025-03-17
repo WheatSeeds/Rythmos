@@ -54,7 +54,7 @@
 }
 
 #product-content-image{
-    height: 500px;
+    height: max-content;
     width: 540px;
     border-radius: 20px;
     border: 1px solid #D9DADB;

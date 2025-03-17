@@ -2,6 +2,7 @@ export type IPrice = {
     display: string;
     amount: string;
     symbol: string;
+    currency: string;
 }
 
 export type IPhoto ={

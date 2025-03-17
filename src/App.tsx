@@ -19,6 +19,7 @@ import FAQPage from "./pages/FAQPage.tsx";
 
 import {BrowserRouter, Route, Routes} from "react-router";
 import ProductPage from "./pages/ProductPage.tsx";
+import PaymentPage from "./pages/PaymentPage.tsx";
 
 
 const App = () => {
@@ -30,6 +31,7 @@ const App = () => {
                 <Route path="/products/:uuid/:productId" element={<ProductPage/>} />
                 <Route path="/faq" element={<FAQPage/>} />
                 <Route path="/cart" element={<ShoppingCartPage/>} />
+                <Route path="/cart/payment" element={<PaymentPage/>} />
             </Routes>
         </BrowserRouter>
     );

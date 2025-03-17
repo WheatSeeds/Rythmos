@@ -14,12 +14,12 @@ const ShoppingCartPage = () => {
     useEffect(() => {
         totalPriceCalc()
     }, [cart])
-    const [totalPrice, setTotalPrice] = useState(0);
+    const [totalPrice, setTotalPrice] = useState<number>(0);
 
     function totalPriceCalc(){
         let totalPriceCount = 0;
         cart.map((item) => {
-            totalPriceCount += parseInt(item.price.amount) * item.quantity;
+            totalPriceCount += parseFloat(item.price.amount) * item.quantity;
         })
         setTotalPrice(totalPriceCount);
     }
@@ -70,7 +70,7 @@ const ShoppingCartPage = () => {
                                         </button>
                                     </div>
                                     <span
-                                        className="cart-list-item-price">{product.price.symbol}{parseInt(product.price.amount) * product.quantity}</span>
+                                        className="cart-list-item-price">{product.price.symbol}{(parseFloat(product.price.amount) * product.quantity).toFixed(2)}</span>
                                     <button className="cart-item-delete-button"
                                             onClick={() => {
                                                 dispatch(deleteFromCart(product));
@@ -90,9 +90,11 @@ const ShoppingCartPage = () => {
                             <div id="cart-page-content-list-bottom-right">
                                 <div id="cart-total-price">
                                     <span id="cart-total-price-title">Total Price:</span>
-                                    <span id="cart-total-price-count">${totalPrice}</span>
+                                    <span id="cart-total-price-count">${totalPrice.toFixed(2)}</span>
                                 </div>
-                                <button className="check-out-button">Check Out</button>
+                                <Link to="/cart/payment">
+                                    <button className="check-out-button">Check Out</button>
+                                </Link>
                             </div>
                         </div>
                     </div>

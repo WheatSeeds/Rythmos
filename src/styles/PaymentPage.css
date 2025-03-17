@@ -1,0 +1,105 @@
+#payment-page-content {
+    display: grid;
+    grid-template-columns: 450px 200px;
+    column-gap: 80px;
+    row-gap: 30px;
+    margin: 100px 0;
+}
+
+#payment-page-content-title,
+#payment-page-form-title,
+#payment-page-price-details-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #262D33;
+    grid-column: 1 / 3;
+}
+
+#payment-page-form {
+    display: grid;
+    grid-template-columns: 210px 210px;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+#payment-page-form-button {
+    width: 150px;
+    height: 40px;
+    background: #141416;
+    border: none;
+    color: #E6E8EC;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.payment-page-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.payment-page-form-field > input {
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #939393;
+}
+
+.payment-page-form-field > input::placeholder {
+    font-size: 14px;
+    color: #626264;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    padding-left: 10px;
+}
+
+.payment-page-form-field > label {
+    color: #4B5157;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.payment-page-form-field:nth-child(-n + 3) {
+    grid-column: 1 / 3;
+}
+
+.payment-page-price-details-item,
+.payment-page-price-details-total {
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment-page-price-details-item > span,
+.payment-page-price-details-total > span {
+    color: #4B5157;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#payment-page-price-details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.payment-page-divider {
+    width: 100%;
+    height: 1px;
+    background: #E6E8EC;
+    grid-column: 1 / 3;
+}
+
+#payment-page-form-title,
+#payment-page-price-details-title{
+    font-size: 20px;
+}
+
+#payment-page-content-title {
+    font-size: 28px;
+}

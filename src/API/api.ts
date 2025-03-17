@@ -31,7 +31,7 @@ export async function fetchProducts({query, uuid, brandsFilter, minPrice, maxPri
             condition: 'new',
             price_min: minPrice,
             price_max: maxPrice,
-            per_page: 8,
+            per_page: 24,
             state: 'for_sale',
             category_uuid: uuid,
             make: brandsFilter,
