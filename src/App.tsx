@@ -20,6 +20,7 @@ import FAQPage from "./pages/FAQPage.tsx";
 import {BrowserRouter, Route, Routes} from "react-router";
 import ProductPage from "./pages/ProductPage.tsx";
 import PaymentPage from "./pages/PaymentPage.tsx";
+import OrderPage from "./pages/OrderPage.tsx";
 
 
 const App = () => {
@@ -32,6 +33,7 @@ const App = () => {
                 <Route path="/faq" element={<FAQPage/>} />
                 <Route path="/cart" element={<ShoppingCartPage/>} />
                 <Route path="/cart/payment" element={<PaymentPage/>} />
+                <Route path="/cart/order" element={<OrderPage/>} />
             </Routes>
         </BrowserRouter>
     );
