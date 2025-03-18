@@ -14,10 +14,6 @@ const Header = () => {
             routeLink: "/products",
         },
         {
-            name: "About Us",
-            routeLink: "/home",
-        },
-        {
             name: "Contact",
             routeLink: "/home",
         },

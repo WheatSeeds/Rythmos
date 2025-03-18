@@ -4,9 +4,11 @@ import Footer from "../components/Footer.tsx";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
 import "../styles/PaymentPage.css"
-import {useSelector} from "react-redux";
-import {RootState} from "../store/store.ts";
+import {useDispatch, useSelector} from "react-redux";
+import {AppDispatch, RootState} from "../store/store.ts";
 import {useEffect, useState} from "react";
+import {Link} from "react-router";
+import {clearCart} from "../store/cartSlice.ts";
 
 const PaymentPage = () => {
 
@@ -38,6 +40,8 @@ const PaymentPage = () => {
     ];
 
     const cart = useSelector((state: RootState) => state.cart);
+    const dispatch = useDispatch<AppDispatch>();
+    console.log(cart)
     const [totalPrice, setTotalPrice] = useState(0);
 
     function totalPriceCalc() {
@@ -66,9 +70,13 @@ const PaymentPage = () => {
                                 <input type={item.type} name={item.name} placeholder={item.placeholder}></input>
                             </div>
                         ))}
-                        <button id="payment-page-form-button"
-                                onClick={(e) => e.preventDefault()}>Confirm and pay
-                        </button>
+                        <Link to="/cart/order">
+                            <button id="payment-page-form-button"
+                                    onClick={() => {
+                                        dispatch(clearCart());
+                                    }}>Confirm and pay
+                            </button>
+                        </Link>
                     </form>
                     <div id="payment-page-price-details">
                         <span id="payment-page-price-details-title">Price details</span>

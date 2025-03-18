@@ -21,21 +21,25 @@ import {BrowserRouter, Route, Routes} from "react-router";
 import ProductPage from "./pages/ProductPage.tsx";
 import PaymentPage from "./pages/PaymentPage.tsx";
 import OrderPage from "./pages/OrderPage.tsx";
+import HomePage from "./pages/HomePage.tsx";
 
 
 const App = () => {
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/products" element={<CategoriesPage/>} />
-                <Route path="/products/:uuid" element={<ProductsPage/>} />
-                <Route path="/products/:uuid/:productId" element={<ProductPage/>} />
-                <Route path="/faq" element={<FAQPage/>} />
-                <Route path="/cart" element={<ShoppingCartPage/>} />
-                <Route path="/cart/payment" element={<PaymentPage/>} />
-                <Route path="/cart/order" element={<OrderPage/>} />
-            </Routes>
-        </BrowserRouter>
+        <>
+            <BrowserRouter>
+                <Routes>
+                    <Route index path="/home" element={<HomePage/>}/>
+                    <Route path="/products" element={<CategoriesPage/>}/>
+                    <Route path="/products/:uuid" element={<ProductsPage/>}/>
+                    <Route path="/products/:uuid/:productId" element={<ProductPage/>}/>
+                    <Route path="/faq" element={<FAQPage/>}/>
+                    <Route path="/cart" element={<ShoppingCartPage/>}/>
+                    <Route path="/cart/payment" element={<PaymentPage/>}/>
+                    <Route path="/cart/order" element={<OrderPage/>}/>
+                </Routes>
+            </BrowserRouter>
+        </>
     );
 };
 

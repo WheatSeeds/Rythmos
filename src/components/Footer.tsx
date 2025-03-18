@@ -23,24 +23,24 @@ const Footer = () => {
             name: 'Products',
             links: [
                 {
-                    name: 'Lorem ipsum dolor sit ame',
-                    routeLink: ''
+                    name: 'Electric Guitars',
+                    routeLink: '/products/dfd39027-d134-4353-b9e4-57dc6be791b9'
                 },
                 {
-                    name: 'Lorem ipsum dolor sit am',
-                    routeLink: ''
+                    name: 'Synthesizers',
+                    routeLink: '/products/d002db05-ab63-4c79-999c-d49bbe8d7739'
                 },
                 {
-                    name: 'Lorem ipsum dolor sit ',
-                    routeLink: ''
+                    name: 'Drums',
+                    routeLink: '/products/b3cb9f8e-4cb6-4325-8215-1efcd9999daf'
                 },
                 {
-                    name: 'Lorem ipsum dolor si',
-                    routeLink: ''
+                    name: 'Amplifiers',
+                    routeLink: '/products/09055aa7-ed49-459d-9452-aa959f288dc2'
                 },
                 {
-                    name: 'Lorem ipsum dolor s',
-                    routeLink: ''
+                    name: 'Effects and Pedals',
+                    routeLink: '/products/fa10f97c-dd98-4a8f-933b-8cb55eb653dd'
                 },
             ],
         },

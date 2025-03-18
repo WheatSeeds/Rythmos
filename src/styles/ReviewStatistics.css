@@ -1,0 +1,65 @@
+.review-stats-line{
+    width: 510px;
+    display: grid;
+    grid-template-columns: 10px 380px 30px max-content;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.review-stats-line > div{
+    background: #95A1BB;
+    border-radius: 2px;
+    height: 12px;
+}
+
+#reviews-statistics{
+    display: grid;
+    grid-template-columns: 330px 510px;
+    column-gap: 80px;
+    margin: 50px 0;
+    align-items: center;
+}
+
+#rating-description{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#rating-description-number{
+    color: #141414;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+}
+
+#rating-description-count-reviews{
+    color: #363940;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+#rating-description-text,
+.review-stats-line-count{
+    color: #95A1BB;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.review-stats-line-interest{
+    color: #363940;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+#reviews-statistics-title{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    color: #363940;
+    display: flex;
+    justify-content: center;
+}
