@@ -1,7 +1,8 @@
-import Header from "../components/Header.tsx";
-import Footer from "../components/Footer.tsx";
-import Button from "../components/Button.tsx";
-import "../styles/OrderPage.css"
+import Header from "../components/UI/Header.tsx";
+import Footer from "../components/UI/Footer.tsx";
+import Button from "../components/UI/Button.tsx";
+import "../styles/OrderPageStyles/OrderPage.css"
+import {Link} from "react-router";
 
 const OrderPage = () => {
     return (
@@ -16,7 +17,9 @@ const OrderPage = () => {
                         <span id="order-number">Order number is <span>#{Date.now()}</span></span>
                         <span id="order-email-message">Check your email to track your order</span>
                     </div>
-                    <Button height={48} width={195} borderRadius={90} fontSize={16}>Continue shopping</Button>
+                    <Link to="/products">
+                        <Button height={48} width={195} borderRadius={90} fontSize={16}>Continue shopping</Button>
+                    </Link>
                 </div>
             </main>
             <Footer/>

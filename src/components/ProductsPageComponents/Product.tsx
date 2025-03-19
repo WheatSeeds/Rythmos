@@ -1,4 +1,4 @@
-import {IProduct} from "../types/types.tsx";
+import {IProduct} from "../../types/types.tsx";
 import {Link, useParams} from "react-router";
 
 type ProductProps = {

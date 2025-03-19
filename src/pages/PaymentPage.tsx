@@ -1,9 +1,6 @@
-import Header from "../components/Header.tsx";
-import Footer from "../components/Footer.tsx";
-
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
-import "../styles/PaymentPage.css"
+import Header from "../components/UI/Header.tsx";
+import Footer from "../components/UI/Footer.tsx";
+import "../styles/PaymentPageStyles/PaymentPage.css"
 import {useDispatch, useSelector} from "react-redux";
 import {AppDispatch, RootState} from "../store/store.ts";
 import {useEffect, useState} from "react";

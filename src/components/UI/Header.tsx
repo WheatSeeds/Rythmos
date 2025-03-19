@@ -1,6 +1,6 @@
 import {Link} from "react-router";
 import {useSelector} from "react-redux";
-import {RootState} from "../store/store.ts";
+import {RootState} from "../../store/store.ts";
 
 const Header = () => {
 

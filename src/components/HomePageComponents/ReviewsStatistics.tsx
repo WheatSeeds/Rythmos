@@ -1,4 +1,4 @@
-import '../../styles/ReviewStatistics.css'
+import '../../styles/HomePageStyles/ReviewStatistics.css'
 
 const ReviewsStatistics = () => {
     const reviewsStatisticsData = {

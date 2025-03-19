@@ -1,10 +1,10 @@
-import Category from "../components/Category.tsx";
-import {ICategory} from "../types/types.tsx";
+import Category from "../components/CategoriesPageComponents/Category.tsx";
 import List from "../components/List.tsx";
-import Header from "../components/Header.tsx";
-
+import Header from "../components/UI/Header.tsx";
+import Footer from "../components/UI/Footer.tsx";
 import {categories} from "../data/categories.ts";
-import Footer from "../components/Footer.tsx";
+import {ICategory} from "../types/types.tsx";
+import "../styles/CategoriesPageStyles/CategoryList.css"
 
 const CategoriesPage = () => {
     return (

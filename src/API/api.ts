@@ -10,13 +10,14 @@ type fetchProductsProps = {
     minPrice: number;
     maxPrice: number;
     priceFilter: string;
+    page: number;
 }
 
 type fetchProductProps = {
     productId?: string;
 }
 
-export async function fetchProducts({query, uuid, brandsFilter, minPrice, maxPrice, priceFilter} : fetchProductsProps) {
+export async function fetchProducts({query, uuid, brandsFilter, minPrice, maxPrice, priceFilter, page} : fetchProductsProps) {
     console.log(brandsFilter, minPrice, maxPrice, priceFilter);
     const response = await axios.get("https://api.reverb.com/api/listings", {
         headers: {
@@ -35,6 +36,7 @@ export async function fetchProducts({query, uuid, brandsFilter, minPrice, maxPri
             state: 'for_sale',
             category_uuid: uuid,
             make: brandsFilter,
+            page: page,
         }
     });
     console.log(response.data.listings);

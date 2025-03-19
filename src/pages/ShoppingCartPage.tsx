@@ -1,5 +1,5 @@
-import Header from "../components/Header.tsx";
-import Footer from "../components/Footer.tsx";
+import Header from "../components/UI/Header.tsx";
+import Footer from "../components/UI/Footer.tsx";
 import {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {AppDispatch, RootState} from "../store/store.ts";
@@ -10,7 +10,6 @@ import {decreaseQuantity, deleteFromCart, increaseQuantity} from "../store/cartS
 const ShoppingCartPage = () => {
     const cart = useSelector((state: RootState) => state.cart)
     const dispatch = useDispatch<AppDispatch>();
-    console.log(cart)
     useEffect(() => {
         totalPriceCalc()
     }, [cart])
@@ -23,8 +22,6 @@ const ShoppingCartPage = () => {
         })
         setTotalPrice(totalPriceCount);
     }
-
-
 
     return (
         <>
@@ -83,7 +80,7 @@ const ShoppingCartPage = () => {
                         <div id="cart-page-content-list-bottom">
                             <div id="cart-page-content-list-bottom-left">
                                 <Link id="back-to-shopping-link" to="/products">
-                                    <img id="back-to-shopping-link-image" src="../../icons/arrow.svg" alt=""/>
+                                    <img id="back-to-shopping-link-image" src="/icons/arrow.svg" alt=""/>
                                     <span id="back-to-shopping-link-text">Back to shopping</span>
                                 </Link>
                             </div>

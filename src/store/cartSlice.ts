@@ -28,7 +28,7 @@ const cartSlice = createSlice({
         },
         clearCart: () => {
             return [];
-        }
+        },
     }
 })
 

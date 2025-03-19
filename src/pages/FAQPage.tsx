@@ -1,5 +1,5 @@
-import Header from "../components/Header.tsx";
-import Footer from "../components/Footer.tsx";
+import Header from "../components/UI/Header.tsx";
+import Footer from "../components/UI/Footer.tsx";
 import {useState} from "react";
 import {faqData} from '../data/faq.ts'
 

@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import FilterCheckbox from "./FilterCheckbox.tsx";
 import FilterRadio from "./FilterRadio.tsx";
 import FilterMinMaxPrice from "./FilterMinMaxPrice.tsx";
-import {categories} from "../../data/categories.ts";
+import {categories} from "../../../data/categories.ts";
 
 type FilterDropdownProps = {
     visible: boolean;

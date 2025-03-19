@@ -1,5 +1,5 @@
-import Header from "../components/Header.tsx";
-import Footer from "../components/Footer.tsx";
+import Header from "../components/UI/Header.tsx";
+import Footer from "../components/UI/Footer.tsx";
 import {fetchProduct} from "../API/api.ts";
 import {useParams} from "react-router";
 import {useState} from "react";
@@ -8,7 +8,7 @@ import {IProductInfo} from "../types/types.tsx";
 
 
 const ProductPage = () => {
-    const { productId } = useParams<string>();
+    const {productId} = useParams<string>();
     const [productDescription, setProductDescription] = useState<IProductInfo>()
 
     async function loadProduct(productId = '') {

@@ -1,5 +1,6 @@
-import {ICategory} from "../types/types.tsx";
+import {ICategory} from "../../types/types.tsx";
 import {Link} from "react-router";
+import "../../styles/CategoriesPageStyles/Category.css"
 
 type CategoryProps = {
     category: ICategory;

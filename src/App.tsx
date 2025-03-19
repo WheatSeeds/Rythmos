@@ -1,28 +1,25 @@
-import "./styles/Product.css"
-import "./styles/ProductList.css"
-import "./styles/Header.css"
-import "./styles/SearchBar.css"
-import "./styles/Filter.css"
-import "./styles/ProductsPage.css"
-import "./styles/Category.css"
-import "./styles/CategoryList.css"
-import "./styles/Footer.css"
+import "./styles/ProductsPageStyles/Product.css"
+import "./styles/ProductsPageStyles/ProductList.css"
+import "./styles/UI/Header.css"
+import "./styles/ProductsPageStyles/SearchBar.css"
+import "./styles/ProductsPageStyles/Filter.css"
+import "./styles/ProductsPageStyles/ProductsPage.css"
+import "./styles/UI/Footer.css"
 import "./styles/App.css"
-import "./styles/FAQPage.css"
-import "./styles/ProductPage.css"
-import "./styles/ShoppingCartPage.css"
+import "./styles/FAQPageStyles/FAQPage.css"
+import "./styles/ProductPageStyles/ProductPage.css"
+import "./styles/ShoppingCartPageStyles/ShoppingCartPage.css"
+
+import {BrowserRouter, Route, Routes} from "react-router";
 
 import ProductsPage from "./pages/ProductsPage.tsx";
 import CategoriesPage from "./pages/CategoriesPage.tsx";
 import ShoppingCartPage from "./pages/ShoppingCartPage.tsx";
 import FAQPage from "./pages/FAQPage.tsx";
-
-import {BrowserRouter, Route, Routes} from "react-router";
 import ProductPage from "./pages/ProductPage.tsx";
 import PaymentPage from "./pages/PaymentPage.tsx";
 import OrderPage from "./pages/OrderPage.tsx";
 import HomePage from "./pages/HomePage.tsx";
-
 
 const App = () => {
     return (
