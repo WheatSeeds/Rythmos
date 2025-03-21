@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../store/cartSlice.ts";
 import { RootState } from "../../store/store.ts";
+import Button from "../../components/Button.tsx";
 
 type ProductInfoProps = {
   product?: IProductInfo;
@@ -24,8 +25,7 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
         <span id="product-content-title">{product?.model}</span>
         <span id="product-content-price">{product?.price.display}</span>
         <div id="product-content-buttons">
-          <button
-            id="add-to-cart-button"
+          <Button
             onClick={() =>
               dispatch(addToCart({ ...product!, quantity: productCounter }))
             }
@@ -36,7 +36,8 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
               alt=""
             />
             <span id="add-to-cart-button-text">Add to Cart</span>
-          </button>
+          </Button>
+
           <div id="count-products-in-cart-buttons">
             <button
               className="count-products-in-cart"

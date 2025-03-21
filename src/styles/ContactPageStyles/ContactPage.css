@@ -1,7 +1,6 @@
-#contact-page-form > .payment-page-form-field:nth-child(2),
-#contact-page-form > .payment-page-form-field:nth-child(5){
+#contact-page-form > .form-field:nth-child(2),
+#contact-page-form > .form-field:nth-child(5){
     grid-column: 1 / 3;
-
 }
 
 #contact-page-content{
@@ -18,7 +17,6 @@
     height: 100vh!important;
     right:0!important;
 }
-
 
 #contact-page-form{
     margin-top: 100px;

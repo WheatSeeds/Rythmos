@@ -1,7 +1,9 @@
 import { IForm, IFormField } from "../types/types.tsx";
 import Input from "./Input.tsx";
+import Button from "./Button.tsx";
+import { Link } from "react-router";
 
-const Form = ({ fields, id, title, submitButtonValue }: IForm) => {
+const Form = ({ fields, id, title, submitButtonValue, linkPath }: IForm) => {
   return (
     <>
       <form id={id} className="form">
@@ -14,11 +16,9 @@ const Form = ({ fields, id, title, submitButtonValue }: IForm) => {
             placeholder={field.placeholder}
           />
         ))}
-        <input
-          id="form-submit-button"
-          type="submit"
-          value={submitButtonValue}
-        />
+        <Link to={linkPath}>
+          <Button type="submit">{submitButtonValue}</Button>
+        </Link>
       </form>
     </>
   );

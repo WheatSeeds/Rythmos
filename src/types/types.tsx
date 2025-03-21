@@ -45,4 +45,5 @@ export type IForm = {
   id?: string;
   title?: string;
   submitButtonValue?: string;
+  linkPath: string;
 };

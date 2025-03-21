@@ -1,10 +1,9 @@
-import { useDispatch, useSelector } from "react-redux";
-import { AppDispatch, RootState } from "../../store/store.ts";
+import { useSelector } from "react-redux";
+import { RootState } from "../../store/store.ts";
 import { useEffect, useState } from "react";
 
 const PriceDetails = () => {
   const cart = useSelector((state: RootState) => state.cart);
-  const dispatch = useDispatch<AppDispatch>();
   const [totalPrice, setTotalPrice] = useState(0);
 
   function totalPriceCalc() {

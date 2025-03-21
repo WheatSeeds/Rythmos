@@ -2,29 +2,13 @@ import "../styles/UI/Button.css";
 
 type ButtonProps = {
   children?: React.ReactNode;
-  width: number;
-  height: number;
-  fontSize: number;
-  borderRadius: number;
+  type?: "submit" | "reset" | "button";
+  onClick?: () => void;
 };
 
-const Button = ({
-  children,
-  width,
-  height,
-  fontSize,
-  borderRadius,
-}: ButtonProps) => {
+const Button = ({ children, type, onClick }: ButtonProps) => {
   return (
-    <button
-      className="button-ui"
-      style={{
-        height: `${height}px`,
-        width: `${width}px`,
-        borderRadius: `${borderRadius}px`,
-        fontSize: `${fontSize}px`,
-      }}
-    >
+    <button className="button-ui" type={type} onClick={onClick}>
       {children}
     </button>
   );
