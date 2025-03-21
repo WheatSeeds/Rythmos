@@ -1,222 +1,223 @@
-#filter-button{
-    background-color: #141416;
-    height: 52px;
-    width: 52px;
-    border: none;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 5;
+#filter-button {
+  background-color: #141416;
+  height: 52px;
+  width: 52px;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 5;
 }
-#filter-button-icon{
-    height: 20px;
-    width: auto;
-}
-
-#filter-dropdown{
-    position: relative;
+#filter-button-icon {
+  height: 20px;
+  width: auto;
 }
 
-.filter-dropdown-visible{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    right: calc(100% - 54px);
-    position: absolute;
-    width: 265px;
-    height: max-content;
-    background-color: #FFFFFF;
-    z-index: 3;
-    align-self: start;
-    border-radius: 5px;
-    transition-duration: 0.4s;
-    padding-bottom: 25px;
+#filter-dropdown {
+  position: relative;
 }
 
-.filter-dropdown-visible > section{
-    width: 215px;
-    height: max-content;
-    margin: 25px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 25px;
+.filter-dropdown-visible {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  right: calc(100% - 54px);
+  position: absolute;
+  width: 265px;
+  height: max-content;
+  background-color: #ffffff;
+  z-index: 3;
+  align-self: start;
+  border-radius: 5px;
+  transition-duration: 0.4s;
+  padding-bottom: 25px;
 }
 
-.filter-dropdown{
-    display: none;
+.filter-dropdown-visible > section {
+  width: 215px;
+  height: max-content;
+  margin: 25px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 25px;
 }
 
-#filter-dropdown-background{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.16);
-    z-index: 3;
+.filter-dropdown {
+  display: none;
 }
 
-#filter-dropdown-minmax{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+#filter-dropdown-background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.16);
+  z-index: 3;
 }
 
-.filter-dropdown-minmax-input{
-    height: 40px;
-    width: 85px;
-    border-radius: 5px;
-    border: 1px solid #D9DADB;
+#filter-dropdown-minmax {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-#filter-dropdown-apply-btn{
-    height: 30px;
-    width: 140px;
-    background-color: #141416;
-    border: none;
-    border-radius: 100px;
-    color: #F7FAFC;
-    font-size: 14px;
-    font-family: "Poppins", sans-serif;
+.filter-dropdown-minmax-input {
+  height: 40px;
+  width: 85px;
+  border-radius: 5px;
+  border: 1px solid #d9dadb;
 }
 
-.filter-input-divider{
-    width: 14px;
-    height: 2px;
-    background-color: #BCBFC2;
-}
-.filter-dropdown-section-divider{
-    height: 1px;
-    width: 100%;
-    background-color: #BCBFC2;
-}
-
-
-#filter-dropdown-minmax-inputs{
-    display: flex;
-    align-items: center;
-    gap: 13px;
+#filter-dropdown-apply-btn {
+  height: 30px;
+  width: 140px;
+  background-color: #141416;
+  border: none;
+  border-radius: 100px;
+  color: #f7fafc;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
 }
 
-.rc-slider-rail{
-    position: absolute;
-    height: 5px;
-    width: 210px;
-    background-color: #D9DADB;
-    border-radius: 2.5px;
+.filter-input-divider {
+  width: 14px;
+  height: 2px;
+  background-color: #bcbfc2;
 }
-.rc-slider-handle{
-    position: absolute;
-    background-color: black;
-    height: 15px;
-    width: 15px;
-    border-radius: 100%;
+.filter-dropdown-section-divider {
+  height: 1px;
+  width: 100%;
+  background-color: #bcbfc2;
+}
+
+#filter-dropdown-minmax-inputs {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.rc-slider-rail {
+  position: absolute;
+  height: 5px;
+  width: 210px;
+  background-color: #d9dadb;
+  border-radius: 2.5px;
+}
+.rc-slider-handle {
+  position: absolute;
+  background-color: black;
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
 }
 
 .rc-slider-track {
-    position: absolute;
-    background-color: #000000;
-    height: 5px;
+  position: absolute;
+  background-color: #000000;
+  height: 5px;
 }
 
 .rc-slider {
-    position: relative;
-    width: 100%;
-    height: 14px;
-    padding: 5px 0;
-    border-radius: 6px;
-    touch-action: none;
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    display: flex;
-    align-items: center;
+  position: relative;
+  width: 100%;
+  height: 14px;
+  padding: 5px 0;
+  border-radius: 6px;
+  touch-action: none;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  display: flex;
+  align-items: center;
 }
 
-#filter-dropdown-brands-checkbox{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    overflow: hidden;
-    height: 240px
+#filter-dropdown-brands-checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow: hidden;
+  height: 240px;
 }
 
-.view-all{
-    height: max-content!important;
+.view-all {
+  height: max-content !important;
 }
 
-.filter-checkbox, .filter-radio{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.filter-checkbox,
+.filter-radio {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.filter-checkbox-field{
-    accent-color: #141416;
-    appearance: none;
-    position: relative;
-    width: 20px;
-    height: 20px;
-    background: #FFFFFF;
-    border-radius: 3px;
-    border: 1px solid #D9DADB;
+.filter-checkbox-field {
+  accent-color: #141416;
+  appearance: none;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border-radius: 3px;
+  border: 1px solid #d9dadb;
 }
-.filter-checkbox-field:checked{
-    background-color: #141416;
-    border: none;
-    background-image: url("../icons/check.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.filter-checkbox-label, .filter-radio-label{
-    font-size: 14px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    color: #4B5157;
+.filter-checkbox-field:checked {
+  background-color: #141416;
+  border: none;
+  background-image: url("../icons/check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.filter-category-title{
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    color: #262D33;
+.filter-checkbox-label,
+.filter-radio-label {
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #4b5157;
 }
 
-.filter-dropdown-view-all-btn{
-    background: none;
-    border: none;
-    color: #262D33;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-size: 14px;
+.filter-category-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #262d33;
 }
 
-#filter-dropdown-price{
-    gap: 10px;
-    display: flex;
-    flex-direction: column;
+.filter-dropdown-view-all-btn {
+  background: none;
+  border: none;
+  color: #262d33;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
 }
 
-.filter-radio > input{
-    accent-color: #141416;
-    appearance: none;
-    position: relative;
-    width: 20px;
-    height: 20px;
-    background: #FFFFFF;
-    border-radius: 100%;
-    border: 1px solid #D9DADB;
+#filter-dropdown-price {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
-.filter-radio > input:checked{
-    background-color: #141416;
-    border: none;
-    background-image: url("../icons/oval.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+.filter-radio > input {
+  accent-color: #141416;
+  appearance: none;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border-radius: 100%;
+  border: 1px solid #d9dadb;
+}
+
+.filter-radio > input:checked {
+  background-color: #141416;
+  border: none;
+  background-image: url("../icons/oval.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }

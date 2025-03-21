@@ -1,12 +1,12 @@
-.product-list{
-    display: grid;
-    grid-template-columns: repeat(4, 268px);
-    column-gap: 15px;
-    row-gap: 52px;
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 268px);
+  column-gap: 15px;
+  row-gap: 52px;
 }
 
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
