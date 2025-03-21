@@ -1,4 +1,5 @@
 import "../../styles/HomePageStyles/ReviewStatistics.css";
+import Stars from "./Stars.tsx";
 
 const ReviewsStatistics = () => {
   const reviewsStatisticsData = {
@@ -10,24 +11,13 @@ const ReviewsStatistics = () => {
   const rating = 4.7;
 
   return (
-    <>
+    <div>
       <span id="reviews-statistics-title">Customers reviews</span>
       <div id="reviews-statistics">
         <div>
           <div id="rating-description">
             <span id="rating-description-number">{rating}</span>
-            <div id="rating-description-stars">
-              {Array.from({ length: 5 }, (_, i) => (
-                <img
-                  src={
-                    i + 1 < Math.round(rating)
-                      ? "../../icons/star-fill.svg"
-                      : "../../icons/star.svg"
-                  }
-                  alt="Star"
-                />
-              ))}
-            </div>
+            <Stars rating={rating} />
             <span id="rating-description-count-reviews">
               {reviewsStatisticsData.reviews} reviews
             </span>
@@ -51,7 +41,7 @@ const ReviewsStatistics = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
